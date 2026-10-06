@@ -1,0 +1,16 @@
+# Web root for the API subdomain (api.codekathax.online).
+
+# No directory listings.
+Options -Indexes
+
+# Pass the Authorization header (Bearer tokens) through to PHP.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+# Block access to any dotfiles (.env, .htaccess) that might end up here.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

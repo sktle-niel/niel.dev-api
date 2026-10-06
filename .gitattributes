@@ -1,0 +1,14 @@
+# Keep line endings consistent no matter which OS a dev clones on.
+# This API is deployed to Linux (Hostinger), so default every text file to LF
+# and stop Git's autocrlf from rewriting endings on Windows checkouts.
+* text=auto eol=lf
+
+# Windows batch scripts must stay CRLF to run reliably.
+*.bat text eol=crlf
+
+# Never touch binary assets.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary

@@ -1,0 +1,3 @@
+# Never serve application source directly (defense in depth if the
+# subdomain document root is ever pointed at the project root).
+Require all denied

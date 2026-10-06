@@ -1,0 +1,2 @@
+# Never serve the SQL schema over HTTP.
+Require all denied

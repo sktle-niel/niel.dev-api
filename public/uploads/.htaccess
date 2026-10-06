@@ -1,0 +1,6 @@
+# Uploaded progress images only — never execute code from this folder.
+php_flag engine off
+Options -Indexes
+<FilesMatch "\.(?i:php|phtml|phar|phps|cgi|pl|py|sh|html?|js)$">
+  Require all denied
+</FilesMatch>

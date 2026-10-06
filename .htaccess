@@ -1,0 +1,7 @@
+# Safety net: if this project is ever placed inside a web root, never serve
+# secrets, source, SQL, or docs. Normally the subdomain points at public/ only,
+# and this file does nothing.
+<FilesMatch "(^\.|\.(env|sql|md|bat|log)$)">
+    Require all denied
+</FilesMatch>
+Options -Indexes
